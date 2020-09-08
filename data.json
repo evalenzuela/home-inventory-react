@@ -1,0 +1,42 @@
+[
+    {
+      "id": 1,
+      "name": "Leche",
+      "container": "Tarro",
+      "unit": "ml",
+      "qty": 250,
+      "photo": "https://via.placeholder.com/50"
+    },
+    {
+      "id": 2,
+      "name": "Azúcar",
+      "container": "Bolsa",
+      "unit": "kg",
+      "qty": 5,
+      "photo": "https://via.placeholder.com/50"
+    },
+    {
+        "id": 3,
+        "name": "Arroz",
+        "container": "Bolsa",
+        "unit": "kg",
+        "qty": 1,
+        "photo": "https://via.placeholder.com/50"
+    },
+    {
+        "id": 4,
+        "name": "Aceite",
+        "container": "Botella",
+        "unit": "lt",
+        "qty": 1,
+        "photo": "https://via.placeholder.com/50"
+    },
+    {
+        "id": 5,
+        "name": "Atún",
+        "container": "Lata",
+        "unit": "gr",
+        "qty": 250,
+        "photo": "https://via.placeholder.com/50"
+    }
+  ]
