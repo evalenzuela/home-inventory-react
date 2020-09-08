@@ -7,5 +7,13 @@ export default StyleSheet.create({
         marginBottom: 24,
         alignSelf: 'center',
         marginTop: 24
+    },
+    textInput: {
+        borderWidth: 1,
+        borderColor: 'gray'
+    },
+    button: {
+        backgroundColor: 'gray',
+        color: '#000'
     }
 });
