@@ -1,6 +1,6 @@
 [
     {
-      "id": 1,
+      "id": "1",
       "name": "Leche",
       "container": "Tarro",
       "unit": "ml",
@@ -8,7 +8,7 @@
       "photo": "https://via.placeholder.com/50"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Azúcar",
       "container": "Bolsa",
       "unit": "kg",
@@ -16,7 +16,7 @@
       "photo": "https://via.placeholder.com/50"
     },
     {
-        "id": 3,
+        "id": "3",
         "name": "Arroz",
         "container": "Bolsa",
         "unit": "kg",
@@ -24,7 +24,7 @@
         "photo": "https://via.placeholder.com/50"
     },
     {
-        "id": 4,
+        "id": "4",
         "name": "Aceite",
         "container": "Botella",
         "unit": "lt",
@@ -32,11 +32,51 @@
         "photo": "https://via.placeholder.com/50"
     },
     {
-        "id": 5,
+        "id": "5",
         "name": "Atún",
         "container": "Lata",
         "unit": "gr",
         "qty": 250,
         "photo": "https://via.placeholder.com/50"
-    }
-  ]
+    },
+    {
+      "id": "6",
+      "name": "Gelatina",
+      "container": "Sobre",
+      "unit": "gr",
+      "qty": 100,
+      "photo": "https://via.placeholder.com/50"
+  },
+  {
+    "id": "7",
+    "name": "Gelatina",
+    "container": "Sobre",
+    "unit": "gr",
+    "qty": 100,
+    "photo": "https://via.placeholder.com/50"
+  },
+  {
+    "id": "8",
+    "name": "Gelatina",
+    "container": "Sobre",
+    "unit": "gr",
+    "qty": 100,
+    "photo": "https://via.placeholder.com/50"
+  },
+  {
+    "id": "9",
+    "name": "Gelatina",
+    "container": "Sobre",
+    "unit": "gr",
+    "qty": 100,
+    "photo": "https://via.placeholder.com/50"
+  },
+  {
+    "id": "10",
+    "name": "Gelatina",
+    "container": "Sobre",
+    "unit": "gr",
+    "qty": 100,
+    "photo": "https://via.placeholder.com/50"
+  }
+]
