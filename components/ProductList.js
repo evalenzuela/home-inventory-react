@@ -1,14 +1,23 @@
-import React, { Component } from "react";
-import { Text, View, Image, FlatList, StyleSheet, TouchableHighlight } from "react-native";
+import React from "react"
+import { Text, View, Image, FlatList, StyleSheet, TouchableHighlight, Dimensions } from "react-native"
+
+import ProductSearch from './ProductSearch'
 
 import commonStyle from '../common';
 
 import data from '../data.json';
 
 export default function ProductList() {
+
+  const windowHeight = Dimensions.get('window').height;
+  const productListHeight = windowHeight * 0.7;
+
   return (
     <View style={{ flex: 1, alignSelf: "stretch" }}>
       <Text style={[ commonStyle.h1 ]}>Product List</Text>
+
+      <ProductSearch />
+
       <FlatList
         data={data}
         renderItem={({ item }) => {
@@ -30,7 +39,7 @@ export default function ProductList() {
             </View>
           );
         }}
-        style={{ flex: 1 }}
+        style={{ flexGrow: 0, height: productListHeight }}
       />
     </View>
   );
