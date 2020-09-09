@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, TextInput, TouchableHighlight, StyleSheet } from 'react-native'
 
-import commonStyle from '../common'
+import commonStyle from '../../common'
 
 export default function ProductSearch() {
 

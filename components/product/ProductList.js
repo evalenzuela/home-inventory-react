@@ -1,11 +1,7 @@
 import React from "react"
 import { Text, View, Image, FlatList, StyleSheet, TouchableHighlight, Dimensions } from "react-native"
 
-import ProductSearch from './ProductSearch'
-
-import commonStyle from '../common';
-
-import data from '../data.json';
+import data from '../../data.json';
 
 export default function ProductList() {
 
@@ -18,12 +14,8 @@ export default function ProductList() {
   ]
 
   return (
-    <View style={{ flex: 1, alignSelf: "stretch" }}>
-      <Text style={[ commonStyle.h1 ]}>Product List</Text>
-
-      <ProductSearch />
-
-      <FlatList
+    
+    <FlatList
         data={data}
         renderItem={({ item, index }) => {
           return (
@@ -46,10 +38,6 @@ export default function ProductList() {
         }}
         style={{ flexGrow: 0, height: productListHeight }}
       />
-      <TouchableHighlight style={[commonStyle.button, {width: 40, height: 40, justifyContent: 'center', alignItems: 'center', marginTop: 20, alignSelf:'flex-end', borderRadius: 20, backgroundColor: 'navy' }]}>
-        <Text style={{ color: '#FFF'}}> Add </Text>
-      </TouchableHighlight>
-    </View>
   );
 }
 
