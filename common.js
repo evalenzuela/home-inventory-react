@@ -17,7 +17,9 @@ export default StyleSheet.create({
     },
     textInput: {
         borderWidth: 1,
-        borderColor: 'gray'
+        borderColor: '#e2e9ff',
+        paddingHorizontal: 5,
+        backgroundColor: '#f9faff'
     },
     selectInput: {
         backgroundColor: '#f9faff',
@@ -27,6 +29,16 @@ export default StyleSheet.create({
     },
     button: {
         backgroundColor: 'gray',
-        color: '#000'
+        color: '#000',
+        paddingHorizontal: 10,
+        paddingVertical: 5
+    },
+    formRow: {
+        alignSelf: 'stretch',
+        marginBottom: 20
+    },
+    formButtons: {
+        flexDirection: 'row',
+        justifyContent: 'flex-end'
     }
 });

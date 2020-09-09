@@ -1,13 +1,16 @@
 import React from "react"
 import { Text, View, Image, FlatList, StyleSheet, TouchableHighlight, Dimensions } from "react-native"
 
+import commonStyles from '../../common'
+
 import data from '../../data.json';
 
+const windowHeight = Dimensions.get('window').height;
+const productListHeight = windowHeight * 0.7;
+
+
 export default function ProductList() {
-
-  const windowHeight = Dimensions.get('window').height;
-  const productListHeight = windowHeight * 0.7;
-
+  
   const colors = [
     '#eee',
     '#FFF'
@@ -30,13 +33,13 @@ export default function ProductList() {
               <Text style={{ alignSelf: "center", paddingLeft: 10 }}>
                 {item.container} {item.qty} {item.unit}
               </Text>
-              <TouchableHighlight onPress={() => { console.log('Pressed...')}} style={{ backgroundColor: 'gray', width: 50, height: 30, alignItems: 'center', justifyContent: 'center'}}>
+              <TouchableHighlight onPress={() => { console.log('Pressed...')}} style={[commonStyles.button, localStyles.plusButton]}>
                   <Text>+</Text>
               </TouchableHighlight>
             </View>
           );
         }}
-        style={{ flexGrow: 0, height: productListHeight }}
+        style={[localStyles.productList]}
       />
   );
 }
@@ -50,4 +53,15 @@ const localStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between'
   },
+  productList: {
+    flexGrow: 0, 
+    height: productListHeight, 
+    alignSelf: 'stretch'
+  },
+  plusButton: {
+    width: 50, 
+    height: 30, 
+    alignItems: 'center', 
+    justifyContent: 'center'
+  }
 });

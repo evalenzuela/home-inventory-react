@@ -1,15 +1,15 @@
 import React from 'react'
 import { View, Text, TextInput, TouchableHighlight, StyleSheet } from 'react-native'
 
-import commonStyle from '../../common'
+import commonStyles from '../../common'
 
 export default function ProductSearch() {
 
     return (
-        <View style={[localStyle.searchContainer]}>
-            <TextInput style={[commonStyle.textInput, localStyle.searchInput]} /> 
-            <TouchableHighlight style={[commonStyle.button, localStyle.searchButton]}>
-                <Text style={[localStyle.searchButtonText]}>
+        <View style={[localStyles.searchContainer]}>
+            <TextInput style={[commonStyles.textInput, localStyles.searchInput]} /> 
+            <TouchableHighlight style={[commonStyles.button, localStyles.searchButton]}>
+                <Text style={[localStyles.searchButtonText]}>
                     Search
                 </Text>
             </TouchableHighlight>
@@ -18,7 +18,7 @@ export default function ProductSearch() {
 
 }
 
-const localStyle = StyleSheet.create({
+const localStyles = StyleSheet.create({
     searchContainer: {
         flexDirection: 'row',
         alignContent: 'center',
@@ -28,8 +28,7 @@ const localStyle = StyleSheet.create({
     },
     searchInput: {
         width: '80%',
-        height: 30,
-        paddingHorizontal: 10
+        height: 30
     },
     searchButton: {
         height: 30,
