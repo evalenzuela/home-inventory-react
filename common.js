@@ -19,13 +19,15 @@ export default StyleSheet.create({
         borderWidth: 1,
         borderColor: '#e2e9ff',
         paddingHorizontal: 5,
-        backgroundColor: '#f9faff'
+        backgroundColor: '#f9faff',
+        height: 30
     },
     selectInput: {
         backgroundColor: '#f9faff',
 		borderColor: '#e2e9ff',
 		borderWidth: 1,
-		borderRadius: 3
+        borderRadius: 3,
+        height: 30
     },
     button: {
         backgroundColor: 'gray',

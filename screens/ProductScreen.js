@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   TextInput,
   Text,
   StyleSheet,
-  TouchableHighlight,
+  TouchableHighlight
 } from "react-native";
 
-import SelectInput from "react-native-select-input-ios";
+import SelectInput from "react-native-select-input-ios"
+
+import Modal from "react-native-modal"
+
+import ContainerForm from '../components/container/ContainerForm'
 
 import commonStyles from "../common";
 
 export default function ProductScreen({ navigation }) {
+
+    const [modalContainerVisible, setModalContainerVisible] = useState(false); 
+
   return (
     <View style={[commonStyles.screenContainer, {justifyContent: 'flex-start'}]}>
       <View>
@@ -19,7 +26,7 @@ export default function ProductScreen({ navigation }) {
       </View>
       <View style={[commonStyles.formRow]}>
         <Text>Nombre: </Text>
-        <TextInput style={[commonStyles.textInput, localStyles.formTextInput]} />
+        <TextInput style={[commonStyles.textInput]} />
       </View>
 
       <View style={[commonStyles.formRow]}>
@@ -31,13 +38,18 @@ export default function ProductScreen({ navigation }) {
             { value: "Lata", label: "Lata" },
             { value: "Caja", label: "Caja" },
             ]}
-            style={[commonStyles.selectInput, localStyles.formSelectInput]}
+            style={[commonStyles.selectInput]}
         />
+        <TouchableHighlight onPress={() => {
+            setModalContainerVisible(!modalContainerVisible)
+        }}>
+            <Text>Agregar Contenedor</Text>
+        </TouchableHighlight>
       </View>
 
       <View style={[commonStyles.formRow]}>
         <Text>Cantidad: </Text>
-        <TextInput style={[commonStyles.textInput, localStyles.formTextInput]} />
+        <TextInput style={[commonStyles.textInput]} />
       </View>
 
       <View style={[commonStyles.formRow]}>
@@ -50,7 +62,7 @@ export default function ProductScreen({ navigation }) {
                 { value: "ml", label: "ml" },
                 { value: "lt", label: "lt" },
             ]}
-            style={[commonStyles.selectInput, localStyles.formSelectInput]}
+            style={[commonStyles.selectInput]}
         />
       </View>
 
@@ -62,17 +74,16 @@ export default function ProductScreen({ navigation }) {
           <Text style={[localStyles.buttonSaveText]}>Save</Text>
         </TouchableHighlight>
       </View>
+      <View>      
+        <Modal isVisible={modalContainerVisible}>
+            <ContainerForm setModalContainerVisible={setModalContainerVisible} />
+        </Modal>
+      </View>
     </View>
   );
 }
 
 const localStyles = StyleSheet.create({
-  formTextInput: {
-      height: 30
-  },
-  formSelectInput: {
-      height: 30
-  },
   buttonSave: {
     marginLeft: 10,
     backgroundColor: 'navy'
