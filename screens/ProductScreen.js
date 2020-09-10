@@ -15,10 +15,12 @@ import ContainerForm from "../components/container/ContainerForm";
 
 import commonStyles from "../common";
 import UnitForm from "../components/unit/UnitForm";
+import BrandForm from "../components/brand/BrandForm";
 
 export default function ProductScreen({ navigation }) {
   const [modalContainerVisible, setModalContainerVisible] = useState(false);
   const [modalUnitVisible, setModalUnitVisible] = useState(false);
+  const [modalBrandVisible, setModalBrandVisible] = useState(false);
 
   return (
     <View
@@ -27,6 +29,29 @@ export default function ProductScreen({ navigation }) {
       <View>
         <Text style={[commonStyles.h1]}>Add / Edit Product</Text>
       </View>
+
+      <View style={[commonStyles.formRow]}>
+        <Text>Marca: </Text>
+        <SelectInput
+          mode="dropdown"
+          options={[
+            { value: "Gloria", label: "Gloria" },
+            { value: "Primor", label: "Primor" },
+            { value: "Campomar", label: "Campomar" },
+            { value: "Costeño", label: "Costeño" },
+            { value: "Faraón", label: "Faraón" },
+          ]}
+          style={[commonStyles.selectInput]}
+        />
+        <TouchableHighlight
+          onPress={() => {
+            setModalBrandVisible(!modalBrandVisible);
+          }}
+        >
+          <Text>Agregar Marca</Text>
+        </TouchableHighlight>
+      </View>
+
       <View style={[commonStyles.formRow]}>
         <Text>Nombre: </Text>
         <TextInput style={[commonStyles.textInput]} />
@@ -100,6 +125,11 @@ export default function ProductScreen({ navigation }) {
       <View>
         <Modal isVisible={modalUnitVisible}>
           <UnitForm setModalUnitVisible={setModalUnitVisible} />
+        </Modal>
+      </View>
+      <View>
+        <Modal isVisible={modalBrandVisible}>
+          <BrandForm setModalBrandVisible={setModalBrandVisible} />
         </Modal>
       </View>
     </View>
