@@ -20,7 +20,7 @@ export default function HomeScreen({ navigation }) {
             <ProductList />
         
             <TouchableHighlight style={[commonStyles.button, localStyles.addButton]} onPress={() => { navigation.navigate('Product')}}>
-                <Text style={{ color: '#FFF'}}> Add </Text>
+                <Text style={{ color: '#FFF'}}> + </Text>
             </TouchableHighlight>
             
         </View>
