@@ -103,6 +103,11 @@ export default function ProductScreen({ navigation }) {
         </TouchableHighlight>
       </View>
 
+      <View style={[commonStyles.formRow]}>
+        <Text>Inventario: </Text>
+        <TextInput style={[commonStyles.textInput]} />
+      </View>
+
       <View style={[commonStyles.formRow, commonStyles.formButtons]}>
         <TouchableHighlight
           style={[commonStyles.button]}

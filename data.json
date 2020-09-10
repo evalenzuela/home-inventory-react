@@ -6,6 +6,7 @@
       "container": "Tarro",
       "unit": "ml",
       "qty": 250,
+      "stock": "24",
       "photo": "https://via.placeholder.com/50"
     },
     {
@@ -15,6 +16,7 @@
       "container": "Bolsa",
       "unit": "kg",
       "qty": 5,
+      "stock": "5",
       "photo": "https://via.placeholder.com/50"
     },
     {
@@ -24,6 +26,7 @@
         "container": "Bolsa",
         "unit": "kg",
         "qty": 1,
+        "stock": "50",
         "photo": "https://via.placeholder.com/50"
     },
     {
@@ -33,6 +36,7 @@
         "container": "Botella",
         "unit": "lt",
         "qty": 1,
+        "stock": "8",
         "photo": "https://via.placeholder.com/50"
     },
     {
@@ -42,24 +46,27 @@
         "container": "Lata",
         "unit": "gr",
         "qty": 250,
+        "stock": "12",
         "photo": "https://via.placeholder.com/50"
     },
     {
       "id": "6",
-      "name": "Gelatina",
+      "name": "Gelatina Fresa",
       "brand": "Negrita",
       "container": "Sobre",
       "unit": "gr",
       "qty": 100,
+      "stock": "3",
       "photo": "https://via.placeholder.com/50"
   },
   {
     "id": "7",
-    "name": "Gelatina",
+    "name": "Gelatina Piña",
     "brand": "Universal",
     "container": "Sobre",
     "unit": "gr",
     "qty": 100,
+    "stock": "2",
     "photo": "https://via.placeholder.com/50"
   },
   {
@@ -69,6 +76,7 @@
     "container": "lata",
     "unit": "gr",
     "qty": 250,
+    "stock": "9",
     "photo": "https://via.placeholder.com/50"
   },
   {
@@ -78,6 +86,7 @@
     "container": "botella",
     "unit": "ml",
     "qty": 100,
+    "stock": "2",
     "photo": "https://via.placeholder.com/50"
   },
   {
@@ -87,6 +96,7 @@
     "container": "Bolsa",
     "unit": "kg",
     "qty": 1,
+    "stock": "4",
     "photo": "https://via.placeholder.com/50"
   }
 ]

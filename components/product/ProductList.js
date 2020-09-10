@@ -36,29 +36,32 @@ export default function ProductList() {
             />
             <View>
               <Text style={{ alignSelf: "center", paddingLeft: 10 }}>
-                {item.name} ({ item.brand })
+                {item.name} ({item.brand})
               </Text>
               <Text style={{ alignSelf: "center", paddingLeft: 10 }}>
                 {item.container} {item.qty} {item.unit}
               </Text>
             </View>
             <View>
-              <TouchableHighlight
-                onPress={() => {
-                  console.log("Pressed...");
-                }}
-                style={[commonStyles.button, localStyles.plusButton]}
-              >
-                <Text>-</Text>
-              </TouchableHighlight>
-              <TouchableHighlight
-                onPress={() => {
-                  console.log("Pressed...");
-                }}
-                style={[commonStyles.button, localStyles.plusButton]}
-              >
-                <Text>+</Text>
-              </TouchableHighlight>
+              <Text>{item.stock} unidades</Text>
+              <View style={{flexDirection: 'row', justifyContent: 'center'}}>
+                <TouchableHighlight
+                  onPress={() => {
+                    console.log("Pressed...");
+                  }}
+                  style={[commonStyles.button, localStyles.inventoryButton]}
+                >
+                  <Text>-</Text>
+                </TouchableHighlight>
+                <TouchableHighlight
+                  onPress={() => {
+                    console.log("Pressed...");
+                  }}
+                  style={[commonStyles.button, localStyles.inventoryButton, localStyles.plusButton]}
+                >
+                  <Text>+</Text>
+                </TouchableHighlight>
+              </View>
             </View>
           </View>
         );
@@ -82,10 +85,13 @@ const localStyles = StyleSheet.create({
     height: productListHeight,
     alignSelf: "stretch",
   },
-  plusButton: {
-    width: 50,
-    height: 30,
+  inventoryButton: {
+    width: 30,
+    height: 25,
     alignItems: "center",
     justifyContent: "center",
   },
+  plusButton: {
+    marginLeft: 5
+  }
 });
